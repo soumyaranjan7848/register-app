@@ -113,6 +113,7 @@ button:hover{
 <div class="thankyou">
 <h3>Thank You 🚀</h3>
 <p>Happy Learning. See You Again.</p>
+<p> All owned by Soumya.</p>
 </div>
 
 </form>
