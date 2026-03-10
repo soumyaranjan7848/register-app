@@ -1,79 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>DevOps Learning Registration</title>
+<meta charset="UTF-8">
+<title>Register</title>
 
 <style>
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Segoe UI", sans-serif;
 }
 
-.card{
-    background:white;
-    padding:40px;
-    border-radius:10px;
-    width:400px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+background: linear-gradient(-45deg,#0f172a,#1e293b,#0f766e,#1e3a8a);
+background-size:400% 400%;
+animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.container{
+width:420px;
+padding:40px;
+border-radius:16px;
+background:rgba(255,255,255,0.08);
+backdrop-filter: blur(18px);
+box-shadow:0 8px 40px rgba(0,0,0,0.3);
+color:white;
 }
 
 h1{
-    text-align:center;
-    color:#333;
+text-align:center;
+margin-bottom:25px;
+font-weight:500;
+letter-spacing:1px;
 }
 
-p{
-    text-align:center;
-    color:#777;
+.input-group{
+position:relative;
+margin-bottom:22px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    margin:8px 0 18px 0;
-    border:1px solid #ccc;
-    border-radius:6px;
+.input-group input{
+width:100%;
+padding:12px;
+border:none;
+border-bottom:2px solid rgba(255,255,255,0.4);
+background:transparent;
+color:white;
+font-size:14px;
+outline:none;
 }
 
-input:focus{
-    border-color:#2c5364;
-    outline:none;
+.input-group label{
+position:absolute;
+left:0;
+top:10px;
+color:rgba(255,255,255,0.7);
+font-size:14px;
+transition:0.3s;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label{
+top:-10px;
+font-size:12px;
+color:#38bdf8;
 }
 
 button{
-    width:100%;
-    padding:12px;
-    background:#2c5364;
-    border:none;
-    color:white;
-    font-size:16px;
-    border-radius:6px;
-    cursor:pointer;
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:linear-gradient(90deg,#22c55e,#06b6d4);
+color:white;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-    background:#1b3948;
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(0,0,0,0.4);
 }
 
 .footer{
-    text-align:center;
-    margin-top:15px;
+margin-top:18px;
+text-align:center;
+font-size:13px;
+color:rgba(255,255,255,0.8);
 }
 
 .footer a{
-    color:#2c5364;
-    text-decoration:none;
+color:#38bdf8;
+text-decoration:none;
 }
 
-.thankyou{
-    text-align:center;
-    margin-top:20px;
-    color:#444;
+.success{
+margin-top:25px;
+text-align:center;
+font-size:14px;
+opacity:0.8;
 }
 
 </style>
@@ -81,39 +119,45 @@ button:hover{
 
 <body>
 
-<div class="card">
+<div class="container">
 
 <form action="action_page.php">
 
-<h1>DevOps Learning Registration</h1>
+<h1>Create Account</h1>
 
-<p>Join Virtual TechBox DevOps Community</p>
-
-<label><b>Full Name</b></label>
-<input type="text" placeholder="Enter Full Name" name="Name" required>
-
-<label><b>Mobile Number</b></label>
-<input type="text" placeholder="Enter Mobile Number" name="mobile" required>
-
-<label><b>Email</b></label>
-<input type="email" placeholder="Enter Email" name="email" required>
-
-<label><b>Password</b></label>
-<input type="password" placeholder="Enter Password" name="psw" required>
-
-<label><b>Repeat Password</b></label>
-<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-<button type="submit">Register</button>
-
-<div class="footer">
-<p>Already have an account? <a href="#">Sign in</a></p>
+<div class="input-group">
+<input type="text" name="Name" required>
+<label>Full Name</label>
 </div>
 
-<div class="thankyou">
-<h3>Thank You 🚀</h3>
-<p>Happy Learning. See You Again.</p>
-<p> All owned by Soumya.</p>
+<div class="input-group">
+<input type="text" name="mobile" required>
+<label>Mobile Number</label>
+</div>
+
+<div class="input-group">
+<input type="email" name="email" required>
+<label>Email Address</label>
+</div>
+
+<div class="input-group">
+<input type="password" name="psw" required>
+<label>Password</label>
+</div>
+
+<div class="input-group">
+<input type="password" name="psw-repeat" required>
+<label>Repeat Password</label>
+</div>
+
+<button type="submit">Create Account</button>
+
+<div class="footer">
+Already registered? <a href="#">Sign in</a>
+</div>
+
+<div class="success">
+Secure access portal • Cloud ready
 </div>
 
 </form>
