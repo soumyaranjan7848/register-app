@@ -1,38 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DevOps Learning Registration</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    width:400px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+h1{
+    text-align:center;
+    color:#333;
+}
+
+p{
+    text-align:center;
+    color:#777;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:8px 0 18px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+input:focus{
+    border-color:#2c5364;
+    outline:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#2c5364;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1b3948;
+}
+
+.footer{
+    text-align:center;
+    margin-top:15px;
+}
+
+.footer a{
+    color:#2c5364;
+    text-decoration:none;
+}
+
+.thankyou{
+    text-align:center;
+    margin-top:20px;
+    color:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
 <form action="action_page.php">
-  <div class="container">
-    <h1>New user Register for DevOps Learning at Virtual TechBox Youtube Channel</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-     
-    <label for="Name"><b>Enter Name</b></label>
-    <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
-    <br>
-    
-    <label for="mobile"><b>Enter mobile</b></label>
-    <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
-    <br>
 
-    <label for="email"><b>Enter Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <br>
+<h1>DevOps Learning Registration</h1>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <br>
+<p>Join Virtual TechBox DevOps Community</p>
 
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
-    <br>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
+<label><b>Full Name</b></label>
+<input type="text" placeholder="Enter Full Name" name="Name" required>
 
-   <h1> Thank You </h1>
-   <br>
-   <h1> Happy Learning. See You Again. </h1>
-   
+<label><b>Mobile Number</b></label>
+<input type="text" placeholder="Enter Mobile Number" name="mobile" required>
+
+<label><b>Email</b></label>
+<input type="email" placeholder="Enter Email" name="email" required>
+
+<label><b>Password</b></label>
+<input type="password" placeholder="Enter Password" name="psw" required>
+
+<label><b>Repeat Password</b></label>
+<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+<button type="submit">Register</button>
+
+<div class="footer">
+<p>Already have an account? <a href="#">Sign in</a></p>
+</div>
+
+<div class="thankyou">
+<h3>Thank You 🚀</h3>
+<p>Happy Learning. See You Again.</p>
+</div>
+
 </form>
+
+</div>
+
+</body>
+</html>
