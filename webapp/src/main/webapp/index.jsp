@@ -157,7 +157,7 @@ Already registered? <a href="#">Sign in</a>
 </div>
 
 <div class="success">
-Secure access portal • Cloud ready
+Secure access portal By SOUMYA
 </div>
 
 </form>
